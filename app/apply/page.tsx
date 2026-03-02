@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ApplyFlow } from "@/components/apply-flow";
 
@@ -22,7 +23,13 @@ export default function ApplyPage() {
           <CardTitle className="text-base">Application overview</CardTitle>
         </CardHeader>
         <CardContent>
-          <ApplyFlow />
+          <Suspense
+            fallback={
+              <p className="text-sm text-slate-400">Loading application flow…</p>
+            }
+          >
+            <ApplyFlow />
+          </Suspense>
         </CardContent>
       </Card>
     </div>

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AdminLeadsClient } from "@/components/admin-leads-client";
 
 export const metadata = {
@@ -17,7 +18,15 @@ export default function AdminLeadsPage() {
         back this with a proper database (Supabase / Postgres) and server-side
         reporting.
       </p>
-      <AdminLeadsClient adminKeyConfigured={adminKeyConfigured} />
+      <Suspense
+        fallback={
+          <p className="text-sm text-slate-400">
+            Loading admin leads overview…
+          </p>
+        }
+      >
+        <AdminLeadsClient adminKeyConfigured={adminKeyConfigured} />
+      </Suspense>
     </div>
   );
 }

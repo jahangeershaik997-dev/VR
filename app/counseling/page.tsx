@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CounselingBooking } from "@/components/counseling-booking";
 
@@ -22,7 +23,13 @@ export default function CounselingPage() {
           <CardTitle className="text-base">Select a time and share details</CardTitle>
         </CardHeader>
         <CardContent>
-          <CounselingBooking />
+          <Suspense
+            fallback={
+              <p className="text-sm text-slate-400">Loading counseling form…</p>
+            }
+          >
+            <CounselingBooking />
+          </Suspense>
         </CardContent>
       </Card>
     </div>

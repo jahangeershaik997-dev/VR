@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProgramEnquireModal } from "@/components/program-enquire-modal";
@@ -38,10 +39,16 @@ export default function ProgramsPage() {
                 universities based on your academic profile, finances, and
                 priorities.
               </p>
-              <ProgramEnquireModal
-                programSlug={program.slug}
-                programName={program.name}
-              />
+              <Suspense
+                fallback={
+                  <div className="mt-3 h-9 w-40 rounded-full bg-slate-100 dark:bg-slate-800" />
+                }
+              >
+                <ProgramEnquireModal
+                  programSlug={program.slug}
+                  programName={program.name}
+                />
+              </Suspense>
             </CardContent>
           </Card>
         ))}

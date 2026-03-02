@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
 
@@ -22,7 +23,13 @@ export default function ContactPage() {
           <CardTitle className="text-base">Contact form</CardTitle>
         </CardHeader>
         <CardContent>
-          <ContactForm />
+          <Suspense
+            fallback={
+              <p className="text-sm text-slate-400">Loading contact form…</p>
+            }
+          >
+            <ContactForm />
+          </Suspense>
         </CardContent>
       </Card>
     </div>

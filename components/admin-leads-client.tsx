@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { useSearchParams } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +19,6 @@ interface AdminLeadsClientProps {
 export function AdminLeadsClient({
   adminKeyConfigured
 }: AdminLeadsClientProps) {
-  const searchParams = useSearchParams();
   const [authenticated, setAuthenticated] = React.useState(false);
   const [leads, setLeads] = React.useState<Lead[]>([]);
   const [query, setQuery] = React.useState("");
