@@ -29,7 +29,7 @@ export default function RootLayout({
   const adminKeyDefined = !!process.env.ADMIN_KEY;
 
   const criticalCSS = `
-    :root{--brand-red:#D11A2A;--brand-blue:#0B3D91;--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--border:#e2e8f0}
+    :root{--brand-red:#E84C3D;--brand-blue:#003580;--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--border:#e2e8f0}
     .dark{--bg:#020617;--fg:#f8fafc;--muted:#94a3b8;--border:#1e293b}
     body{background:var(--bg);color:var(--fg);font-family:var(--font-inter),system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased}
     .font-display{font-family:var(--font-playfair),Georgia,serif}

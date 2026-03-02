@@ -12,8 +12,8 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          red: "#D11A2A",
-          blue: "#0B3D91"
+          red: "#E84C3D",
+          blue: "#003580"
         }
       },
       borderRadius: {
