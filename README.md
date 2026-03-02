@@ -259,6 +259,8 @@ In the project **Settings → Environment Variables**, add:
 
 Re‑deploy after adding/updating env vars.
 
+**Note:** Tailwind CSS, PostCSS, and Autoprefixer are in `dependencies` (not `devDependencies`) so they are installed on Vercel when `NODE_ENV=production`. This ensures the production CSS is built and the site is fully styled.
+
 ### 5. Verify deployment
 
 Once deployment finishes, verify:
