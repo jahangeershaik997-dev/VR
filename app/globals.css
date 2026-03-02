@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+}
+
+.dark {
+  --background: 15 23 42;
+  --foreground: 248 250 252;
+}
+
+body {
+  @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] antialiased;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #d11a2a, #0b3d91);
+  padding: 1px;
+}
+
+.card-surface {
+  @apply rounded-2xl bg-white/90 shadow-soft dark:bg-slate-900/90;
+}
+
+.hero-gradient {
+  background-image: radial-gradient(circle at top left, rgba(209, 26, 42, 0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(11, 61, 145, 0.18), transparent 55%);
+}
+
