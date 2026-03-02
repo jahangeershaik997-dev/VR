@@ -1,11 +1,10 @@
 export const mainNav = [
-  { href: "/study-in-usa", label: "Study in USA" },
-  { href: "/programs", label: "Programs" },
-  { href: "/universities", label: "Universities" },
+  { href: "/free-eligibility-check", label: "Free Eligibility Check" },
   { href: "/services", label: "Services" },
-  { href: "/resources", label: "Resources" },
-  { href: "/counseling", label: "Counseling" },
-  { href: "/about", label: "About" },
+  { href: "/migrate", label: "Migrate" },
+  { href: "/work", label: "Work" },
+  { href: "/study-in-usa", label: "Study" },
+  { href: "/visa", label: "Visa" },
   { href: "/contact", label: "Contact" }
 ];
 
